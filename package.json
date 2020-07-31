@@ -1,0 +1,27 @@
+{
+  "name": "data-import",
+  "version": "1.0.0",
+  "description": "Tools for importing data into Firebase.",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acs-upb-mobile/data-import.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acs-upb-mobile/data-import/issues"
+  },
+  "homepage": "https://github.com/acs-upb-mobile/data-import#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "convert-excel-to-json": "^1.7.0",
+    "firestore-export-import": "^0.6.1",
+    "inquirer": "^7.3.3",
+    "inquirer-file-tree-selection-prompt": "^1.0.6",
+    "path": "^0.12.7"
+  }
+}
