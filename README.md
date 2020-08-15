@@ -10,9 +10,12 @@ key. This is done by accessing "Users and Permissions" in the settings, navigati
 accounts" and generating a new private key for Node.js. This key should be saved in this directory
 as `serviceAccount.json` and should never be shared with anyone.
 
-Place the file you would like to import in the `data/` folder in this repository, then run:
+Place the file you would like to import in the [`data/`](data) folder in this repository, then run:
 
 ```
 npm ci
 node import.js
 ```
+
+## Data sources
+The files in the ['data/'](data) folder which are to be imported are either exports from various websites or scraped data obtained using the scripts in the ['crawlers/'](crawlers) folder.
