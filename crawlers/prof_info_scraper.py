@@ -102,7 +102,7 @@ def get_info():
     for prof_url in prof_urls:
         prof_info.append(get_prof_info(prof_url))
         
-    return prof_info
+    return {"people": prof_info}
 
 def write_json_info_to_file():
     parser = argparse.ArgumentParser(description="Extract information about ACS teachers.")
