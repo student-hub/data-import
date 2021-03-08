@@ -1,0 +1,280 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1033,3090" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="652,3025" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=True,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Scrape the list of teachers extracting their names and  their profile's URL.&#xD;&#xA;The data is saved to Excel." AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Cadre didactice" sap:VirtualizedContainerService.HintSize="610,721" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,458" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of DataTable)(&quot;DataTable from Extract Table Data&quot;)]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Url' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataNextLink' /&gt;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="0">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=category&amp;id=7%3Aupb&amp;Itemid=11&amp;layout=default" DesignTimeRectangle="926, 979, 55, 20" ElementType="Text" FriendlyName="'Următor'" FullSelectorArgument="&lt;webctrl aaname='Următor' parentid='comp_80' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Următor' parentid='comp_80' tag='A' type='' check:text='Următor' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAYCAYAAABEHYUrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKkSURBVFhH5VPbalNBFPVPRBRRFMX7FwgiiCCCiAjS4qUgCIIgCIIIYpOYfoKKtk9JWlpKS0uShhZMYq+0TYTm8tJbmj4dEuPbdmbvM8PMYfaDVXw42bBg9m3NWpOTQ9BF0Z1mT95+EVqosMxe6RsIHVizl5/EQwfW7KXHsdCBNXvxYeT/Y24fvB9Zcc5Csb0PI66ZvwBr9kLvewdWoCb6tTm7PlD+BbCzYtUOhowwSRq8ckbXR3bs/KBgzZ7veefAMpmdtevxcgdge9mq/UsMb0uzaWfvT8CaPffgrQNLvlm7Hi9Js0uUzzYB2h3wJFG7DnHM61AUgimaMDxUp74IrzRt8+joQHHIrulZyalC3oH70/hVeOJuGUGNEqzZs/ffOLBIZnN2/QOaXaQ8J4V0oDDo9zFXO1NQwM+0CSndc5wFUvJxfE559kpTxDdYw4ey+HDOPBNHEKzZM/deO7AAVdGv5ux6bF2Y3VqgPLcnJvYgpfqBPLUlhK9PUu+rFG7MGjA5rR3J165BTM1q/kk0q+ccYM2evvvKgXkyO2PXoyhsnvIZKaYKUdUP5EkUPkG9L1U0m8TeBOTxVzfC5zR38C6TX3PQflCbCdbsqTsvHRiHfEsQZu26FANb3ynPNgBaFYiqfiBH4Wvj1PtcEUIbkBTn6JowYcxh7nNaOy5+5HBrM8Ga5ZDYFAOtDYio2qcN/A9VM36ekWKMfiCX+97qmLHbgIQ4R1Z/GnMF/IJgs8DsqPvG0CDN0VnrYKDCMnvi1nMWaNiIStrop3dRdD+Tk/BR6n2Uwnchgb08VHw+kDVjr18+hAi9J3sqNPcofBNmLS0BsGaP33wWOrBmj914GjqwZo9e7wsdWLNHrj0KHVizh6/2hg6s2bBChTbbDdFFZgF+AxYkveXSX8X5AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cadre didactice' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="740, 917, 22, 31" ElementType="Text" FriendlyName="'25'" FullSelectorArgument="&lt;webctrl parentid='comp_80' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='25' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='comp_80' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;25&amp;#x9;&amp;#x9;' check:text='25' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAjCAYAAACKPxqrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADLSURBVEhL7ZPNDcMgDEa7qXcJk4Q1whhRdig59tiDy58SQAIjq4mqyk/ygYB48mfywJu4X/R8vS+tP47uakTERkRsfkC0G1QACKnUYtOGo9oD0LilrRYNkUUzKTR7WoaLs/WqESbjTo0zGJ0Xn13ZRSHMVA8lg6INtYtIr2k157Gd33sMicLFRwdldyHGPNYGpChIuvOoxA06ongBPYt4joqvKSrjyvHzql4g/3nH4ecD93XEU/xH9Hw8Q4/hG4iIjYjYiIiNiJggfgB//N2FhpZYrwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="740, 471, 194, 775" FriendlyName="'1 ANGHEL Ana Magdalena 2'" FullSelectorArgument="&lt;webctrl parentid='comp_80' tag='TBODY' /&gt;" InformativeScreenshot="1e839a3c266aa888fd5dba745715cf73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cadre didactice' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ueab:WriteRangeX Destination="[Notes.Table(&quot;Table2&quot;)]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of DataTable)(&quot;DataTable from Extract Table Data&quot;)]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJqSURBVDhPpZBbSBRhGIY3LTNcLCk3kiJZ2rQ87M7szDg7h53DulkaWrFlUSiiCHYgsAsNDQ2iFss0MSQKugpCDIoINrdEgupOLIIo8Gor8qKyTAoN3r5Zp0jwpnrg4Z///973H2Yc/41hmEK4tDx6oEZdZx/9HZqmd5rGduyvEyND45zHPk5y/ZGQfeMpH7G3i5OZuXKFx7NZDYhK5+EOxn15tKSvKybl9wwHWvtHxBd9cWG4NyYesuMOTQ3XmWaoyt7+JlXgxUpZUiJ7mwuY0w+URNsd8b5Pc7lplnXyduDmqZjSWn+2JMcIhifps+PztYWkSQGlQ9aF9ekZy9bmM7kbgqrOqbLhV3cXs/uiJY1Ghaz5Wf6o0+nMtjsLcblcWaqiXdPk0njIKPseDpfBMqRvm9aC5i2aDVAsfT69CLpu9IZCpaAVkiSD5/iksqzA0E3QbI5+eosdX4iqBM9oQR20gvfzaKytRfelfpzv7sHBSIQuEpIzO9Ng1+YRBTFPCkg/JFEC62UQPRfFhYkZVIx9wa7xaVyZmELLiWawPhZWhrJfaXXZdYeDY7kBgRfAMiyqqyoRffkRwuh7XJ34jN7XU8i59wZdYwnsDJnwsxysLOfnjifLfoZdw/qYMVqxJS8f7W3tqH4+g4tU/IUZT4B/OIkj9XUo3FoAK8t4fUPJC4oLi9zkW29RMfI2eXCsqQkNzz6h5vE7zMzO4cO3WbgHX6FyJIHayJ7kS6wsXfSE6qmOlCUpMXrAP3qXTLKUXE6uJnNJHxkkd5DlpEZ6yY3kKjKNtDqLkkJalzlJK2yZQVola/YHDsdPcZT9LC2tbZ4AAAAASUVORK5CYII=" InformativeScreenshot="4d810ef18226ec1d912a71b8d25ad959.png" Selector="&lt;html app='chrome.exe' title='Cadre didactice'/&gt;" Url="http://www.aii.pub.ro/index.php?option=com_content&amp;view=category&amp;id=7:upb&amp;Itemid=11&amp;layout=default" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ueab:ExcelForEachRow sap2010:Annotation.AnnotationText="Iterate over the lit of teachers, scraping from each profile page the necessary informtion and saving it in the current row under the desired column." DisplayName="For Each Excel Row" EmptyRowBehavior="StopAfterThreeConsecutiveEmptyRows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="610,2174" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[Notes.Table(&quot;Table2&quot;)]" SaveAfterEachRow="False">
+      <ueab:ExcelForEachRow.Body>
+        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="598,1947" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Group" sap:VirtualizedContainerService.HintSize="556,1857" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Default="[CurrentRow.ByField(&quot;Name&quot;)]" Name="ProfName" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: ANGHEL Ana Magdalena" sap:VirtualizedContainerService.HintSize="516,1740" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" Version="V1">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,1519" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Birou'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_6" Timeout="1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=article&amp;id=841:cv-anghel-magdalena&amp;catid=7:upb&amp;Itemid=11" DesignTimeRectangle="782, 622, 41, 15" ElementType="Text" FriendlyName="'ED410'" FullSelectorArgument="&lt;webctrl aaname='ED410' parentid='page' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page' tag='SPAN' type='' /&gt;" InformativeScreenshot="cf6fcefffc660797bb51da40df5f4a95.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ANGHEL Ana Magdalena' /&gt;" SearchSteps="FuzzySelector">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="740, 622, 43, 15" FriendlyName="'Birou'" FullSelectorArgument="&lt;webctrl isleaf='1' tableRow='4' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' type='' tag='STRONG' aaname='Birou: ' check:text='Birou:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAATCAYAAAAAn1R6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADmSURBVEhL7ZRhDoMgDEY9I4kXWrwKHsUdZD88BvuqdGGVWpYsAQ0vIRttlUdhG8KF6fK1uIf8OmOCWW4ssYZYHnvMv2KgAuvs4DAc5adnDBAQdLSBEfkYakZ+9IY88BCneNr92pTJc+fRbear80l+ok8M3iTPt5GcHCFPT66tNZJR5XNDvfMsL2o28URYnt5f5FGAkh3tAe4gL6R1/gOeP7xHxCx5i+I7L+OWfPY9+E4xhxzRrHxTnT+9rzl5YN15uRbneW5t5qcfLHeIKJEnzv5tiDTvhWyRPApQcl26fC26fB1CeAN6btA8s6GQtQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Birou")]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Email'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_7" Timeout="1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=article&amp;id=841:cv-anghel-magdalena&amp;catid=7:upb&amp;Itemid=11" DesignTimeRectangle="787, 601, 106, 14" ElementType="Text" FriendlyName="'ana.anghel@upb.ro'" FullSelectorArgument="&lt;webctrl aaname='ana.anghel@upb.ro' parentid='page' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page' tag='A' type='' /&gt;" InformativeScreenshot="2ecb487c88d61543e1b654227df9b94f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ANGHEL Ana Magdalena' /&gt;" SearchSteps="FuzzySelector">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="740, 600, 44, 15" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl isleaf='1' tableRow='3' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' type='' tag='STRONG' aaname='Email: ' check:text='Email:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAATCAYAAADWOo4fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL7ZNhDoMgDIV3RpNdaOEq7ijuIPvhMdjr6DPYiGCiMhZf0phCS/tZuPnGdQHU1v8AjE848JbMvTRoT7297+T8R3AHfKVWj/UtQkoQAQ5pdknNAxidAtDftUh83VCYxcU67MVyjFMbdD03Adaa4hNCSNDaG+AhPJSQ9Nn0BBg3ARvFMQ0fBlA0AS1ii6auwWwKhQClQkrQFgD+lRwA478TMg3/PkCm4XYAkCNvgHulALZWSggJWnvE9pGWXqHZmch1kq9AuwO0qgugti6AuvL+A+adLi5czdgfAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Email")]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Telefon'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_8" Timeout="1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=article&amp;id=55%3Acv-dobrescu&amp;catid=7%3Aupb&amp;Itemid=11" DesignTimeRectangle="851, 527, 85, 15" ElementType="Text" FriendlyName="'021/402.91.05'" FullSelectorArgument="&lt;webctrl aaname='021/402.91.05 ' parentid='page' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page' tag='SPAN' type='' /&gt;" InformativeScreenshot="ffe04d85b303eef3c6efed04c389b89e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dobrescu Radu Nicolae' /&gt;" SearchSteps="FuzzySelector">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="740, 527, 51, 15" FriendlyName="'Telefon'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;strong' isleaf='1' tableRow='3' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;strong' isleaf='1' type='' tag='STRONG' aaname='Telefon:' check:text='Telefon:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAATCAYAAAA05pVmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVFhH7ZQ9DoMwDIU5I1Ivw8wtmLkCSycWBjbEzoqExBlckTgQbCdA/1RonuSh7qvtL04awYUV4M6qP4AbWohvd4jEKCEflMuhDtLJl7TQY8Yv9KuoocLsJ8Q21xelapw2mNjUMbjj9Z9XgFNqapXXYV9VAc7hNbXnyDoxv+ptnkzWQp4Yj91/xDy/4vvgcNi4GNXHKrOLETivl9dn/cjvl/8DrDHD6oN5GU4PaJ0WDqA9azi/l9bHwVZXmuQYzP5ncACOhz5dCY6H2cS6vjQo2cR34Ox7bmtjc0Q/tzn5HRkA0szr5fVZP9ebc8KRTVvaBzcJm5pYvhdO0umV65uc5H8r3JUU4M6qAHdOATwATesGhokqxMoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Telefon")]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_9" Timeout="1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=article&amp;id=824%3Acv-dobrica-liliana&amp;catid=7%3Aupb&amp;Itemid=11" DesignTimeRectangle="740, 685, 99, 15" ElementType="Text" FriendlyName="'Profesor dr.ing.'" FullSelectorArgument="&lt;webctrl aaname='Profesor dr.ing.' parentid='page' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page' tag='SPAN' type='' /&gt;" InformativeScreenshot="5b623f32fed9ec3bf792a252f8b6afe3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='DOBRICA Liliana' /&gt;" SearchSteps="FuzzySelector">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="738, 649, 172, 25" FriendlyName="'P'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;p' isleaf='1' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;p' isleaf='1' tag='P' type='' aaname='   ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAZCAYAAACsNsUeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKUSURBVHhe7ZRdTxNBFEB3t+Gjn7R9MOqD+iDBBzAmEoQXBSWSSgttLaUt3VIKUi1Y///T9dzZtsTEPzDknuRmdu/emQ53zhDIjKMwI5/CVdkJl2U7tSzvoxV5G67IFrEbrcp+lKYmK7UwJ9Ug50YXkeaycvKfOOX7qY5BEnXeH4J3zTPO5zdYV3NV1jxiLydhWs6Ic/bW5XuHeW3GLuNFVJAe9ec8n4V5aTG23JjEd5fX2rwMwoKMUkXprT2R+us3crixIbsvXspWoSQflrJSiXLSoL5DbRxQS/0N8SNaSyJck2vyw0DXoobfviI3JHTty1n9hJpbakbU9Ai3D/bY59ttWJQp8cdFiSjLb8a7WdzPYhKUXK2uf7kI3VNexuS1dhqVZRwVpcO+tf+fOZ9D+nVMnxpRnp7k5YLos8+Y+THzHgsLYSuIcsAfvYeg29ESgbA0YpP3HaT5SGO+UFPhYGs0w4mLEDWapE1LBJ3JSp2OdRrqhCVqQcZJ2mRuk7kqiBOWmAurh6t5Fb3KusdBWpqsrVI+yJmMKqJGm+cWkvwjK7UqbIs1uxxgTO6Kw+uny1J7/koO1tfl3dNnspnJy14qI9+obVKnF2LAAV8h3rVKiKzzGKmIM2FVhpjvMe+XKrITqiBjnm/IDfmul0ov0jl5le7nXNYgEXaKsCrfL3IT4j5KhL1zwpYQtujm6YXQ39T9qKRao3P1ua0Xm38k+5zVV0bts/a2q/tkLwP23WVem/fHwkJYw/ABE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwChPW8AoT1vAKE9bwCJG/EJ2Bz/TfKp0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Titlu")]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <If Condition="[string.IsNullOrEmpty(CurrentRow.ByField(&quot;Titlu&quot;)) = true]" sap:VirtualizedContainerService.HintSize="462,434" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,257" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Grad didactic'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NGetText_10" Timeout="1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="http://www.aii.pub.ro/index.php?option=com_content&amp;view=article&amp;id=55%3Acv-dobrescu&amp;catid=7%3Aupb&amp;Itemid=11" DesignTimeRectangle="851, 462, 615, 15" ElementType="Text" FriendlyName="'Prof. dr.'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span' isleaf='1' parentid='page' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span' isleaf='1' parentid='page' type='' tag='SPAN' /&gt;" InformativeScreenshot="6e04f7b244347d3ce66d7895ac1ff78b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dobrescu Radu Nicolae' /&gt;" SearchSteps="FuzzySelector">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="740, 462, 90, 15" FriendlyName="'Grad didactic'" FullSelectorArgument="&lt;webctrl idx='1' isleaf='1' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='STRONG' aaname='Grad didactic:' check:text='Grad didactic:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAATCAYAAAAZFLrcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVFhH7ZY7bsMwDIZ9RgO9jOfcwnOu4KVTFg/eguxZAwTIGVTJIi2SerZRKxTQDxCBZJoiP9KOB9XVRB18I3XwjdTBN5IH/rFc1PDxyex0hYu1dN32uOPygo20MCfMQ66lctffUa3YBPxLnScD+qLOT9jSwoNKIRXpn4FfZ8ekOvjaySb1Jvicatayzv4w1hCAx2nf1Go34nre1KiLGuZNncwv3gMwD5vvu7sVxjemi1hy4O8Q29im/TlIH2zan1+3PqxOrAkNcsdz0Ey+oaba5qDRJsG50009YAcF4OMOno4kSfKwhyBlcnztmhADz6fMQQvHy/nDeVjbMTgwGHItnkY58emz5QD/BLyc4FjiVOIeDpo0Kvmq8XNJNzLvb+UaspuYau7rlAYfB5tTwatGBA+Bxz1IMJtcCnwgvoTD1ll/8YQJfwlWKgk+xKJQx58rwsDinPLgk2BaT7zMV6xlbKlfnngjBES776alBLwFCcloC4MSExgQLzYXL+OP+UL+1ldbpBG4xtzsWTHwfmPsuvgd74SBmdEbA+BZg7SN+ouHJm90FGySzH7V0HglXzVl/rtN+mvM+IZqQqO10Wt63z+b1mbMNeFb4Lv+Rh18I3XwjdTBN1IH30RKfQFNaZtburIREQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Titlu")]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:GetAttribute Attribute="url" ContinueOnError="True" DisplayName="Get Attribute 'IMG'" sap:VirtualizedContainerService.HintSize="462,133" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                        <ui:GetAttribute.Result>
+                          <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Poza")]</OutArgument>
+                        </ui:GetAttribute.Result>
+                        <ui:GetAttribute.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="637ea796-a290-43b0-94cd-771f1efc799d" InformativeScreenshot="a45de88040bf513acb369d460ad9de94" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='{0}' /&gt;&lt;webctrl tag='H1' /&gt;&lt;nav up='1' /&gt;&lt;webctrl parentid='page' tag='IMG' /&gt;&quot;, ProfName)]">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetAttribute.Target>
+                      </ui:GetAttribute>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJqSURBVDhPpZBbSBRhGIY3LTNcLCk3kiJZ2rQ87M7szDg7h53DulkaWrFlUSiiCHYgsAsNDQ2iFss0MSQKugpCDIoINrdEgupOLIIo8Gor8qKyTAoN3r5Zp0jwpnrg4Z///973H2Yc/41hmEK4tDx6oEZdZx/9HZqmd5rGduyvEyND45zHPk5y/ZGQfeMpH7G3i5OZuXKFx7NZDYhK5+EOxn15tKSvKybl9wwHWvtHxBd9cWG4NyYesuMOTQ3XmWaoyt7+JlXgxUpZUiJ7mwuY0w+URNsd8b5Pc7lplnXyduDmqZjSWn+2JMcIhifps+PztYWkSQGlQ9aF9ekZy9bmM7kbgqrOqbLhV3cXs/uiJY1Ghaz5Wf6o0+nMtjsLcblcWaqiXdPk0njIKPseDpfBMqRvm9aC5i2aDVAsfT69CLpu9IZCpaAVkiSD5/iksqzA0E3QbI5+eosdX4iqBM9oQR20gvfzaKytRfelfpzv7sHBSIQuEpIzO9Ng1+YRBTFPCkg/JFEC62UQPRfFhYkZVIx9wa7xaVyZmELLiWawPhZWhrJfaXXZdYeDY7kBgRfAMiyqqyoRffkRwuh7XJ34jN7XU8i59wZdYwnsDJnwsxysLOfnjifLfoZdw/qYMVqxJS8f7W3tqH4+g4tU/IUZT4B/OIkj9XUo3FoAK8t4fUPJC4oLi9zkW29RMfI2eXCsqQkNzz6h5vE7zMzO4cO3WbgHX6FyJIHayJ7kS6wsXfSE6qmOlCUpMXrAP3qXTLKUXE6uJnNJHxkkd5DlpEZ6yY3kKjKNtDqLkkJalzlJK2yZQVola/YHDsdPcZT9LC2tbZ4AAAAASUVORK5CYII=" InformativeScreenshot="315cfddd467de07679d8e7614e84fdf9.png" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='{0}' /&gt;&quot;, ProfName)]" Url="[string.Format(&quot;http://www.aii.pub.ro{0}&quot;, CurrentRow.ByField(&quot;Url&quot;))]" />
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelForEachRow>
+  </ueab:SequenceX>
+</Activity>
