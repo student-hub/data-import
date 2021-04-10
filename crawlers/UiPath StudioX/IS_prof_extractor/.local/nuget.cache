@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zc7R9EqYwPQoCqi6A8ozbBeyKdgDiupXmfDJeFb075LPM07VzbRKGOG+HGs5CgftJtPJKI/zb9SPSS2Q8OEA6g==",
+  "dgSpecHash": "++Pd0qPO5PjnJo2nIRfS2a3VASRSyIlP6GvPUWLrSHEM6MfoZkT6XRBoQycVyhsLGCDMCJE+Fw+DLzvy0qxzjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GeorgeMD\\Documents\\UiPath\\Is prof extractor\\.local\\",
+  "projectFilePath": "C:\\Users\\GeorgeMD\\source\\repos\\acs-upb-mobile-all\\data-import\\crawlers\\UiPath StudioX\\IS_prof_extractor\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\GeorgeMD\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
     "C:\\Users\\GeorgeMD\\.nuget\\packages\\aforge.imaging\\2.2.5\\aforge.imaging.2.2.5.nupkg.sha512",

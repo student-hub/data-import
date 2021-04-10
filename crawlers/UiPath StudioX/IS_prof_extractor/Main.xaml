@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1033,3090" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1167,3243" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -65,10 +65,9 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="652,3025" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="652,3178" sap2010:WorkflowViewState.IdRef="SequenceX_1">
     <ueab:SequenceX.Variables>
       <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=True,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
       <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
@@ -78,13 +77,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Scrape the list of teachers extracting their names and  their profile's URL.&#xD;&#xA;The data is saved to Excel." AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Cadre didactice" sap:VirtualizedContainerService.HintSize="610,721" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Scrape the list of teachers extracting their names and  their profile's URL.&#xA;The data is saved to Excel." AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Cadre didactice" sap:VirtualizedContainerService.HintSize="610,874" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,458" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,611" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,7 +103,8 @@
                 <uix:TargetAnchorable DesignTimeRectangle="740, 471, 194, 775" FriendlyName="'1 ANGHEL Ana Magdalena 2'" FullSelectorArgument="&lt;webctrl parentid='comp_80' tag='TBODY' /&gt;" InformativeScreenshot="1e839a3c266aa888fd5dba745715cf73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cadre didactice' /&gt;" SearchSteps="Selector" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
-            <ueab:WriteRangeX Destination="[Notes.Table(&quot;Table2&quot;)]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of DataTable)(&quot;DataTable from Extract Table Data&quot;)]" />
+            <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="412,113" sap2010:WorkflowViewState.IdRef="ClearRangeX_1" TargetRange="[Notes.Table(&quot;Table2&quot;)]" />
+            <ueab:WriteRangeX Destination="[Notes.Table(&quot;Table2&quot;)]" DisplayName="Write Range" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of DataTable)(&quot;DataTable from Extract Table Data&quot;)]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -167,6 +167,12 @@
                         <uix:NGetText.Text>
                           <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Birou")]</OutArgument>
                         </uix:NGetText.Text>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
                       <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Email'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_7" Timeout="1">
                         <uix:NGetText.Target>
@@ -181,6 +187,12 @@
                         <uix:NGetText.Text>
                           <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Email")]</OutArgument>
                         </uix:NGetText.Text>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
                       <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Telefon'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_8" Timeout="1">
                         <uix:NGetText.Target>
@@ -195,6 +207,12 @@
                         <uix:NGetText.Text>
                           <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Telefon")]</OutArgument>
                         </uix:NGetText.Text>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
                       <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="462,165" sap2010:WorkflowViewState.IdRef="NGetText_9" Timeout="1">
                         <uix:NGetText.Target>
@@ -209,10 +227,22 @@
                         <uix:NGetText.Text>
                           <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Titlu")]</OutArgument>
                         </uix:NGetText.Text>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </uix:NGetText>
-                      <If Condition="[string.IsNullOrEmpty(CurrentRow.ByField(&quot;Titlu&quot;)) = true]" sap:VirtualizedContainerService.HintSize="462,434" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[string.IsNullOrEmpty(CurrentRow.ByField(&quot;Titlu&quot;)) = true]" sap:VirtualizedContainerService.HintSize="462,434" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="400,257" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,257" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,7 +265,7 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -244,7 +274,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:GetAttribute Attribute="url" ContinueOnError="True" DisplayName="Get Attribute 'IMG'" sap:VirtualizedContainerService.HintSize="462,133" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                      <ui:GetAttribute Attribute="src" ContinueOnError="True" DisplayName="Get Attribute 'IMG'" sap:VirtualizedContainerService.HintSize="462,133" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
                         <ui:GetAttribute.Result>
                           <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Poza")]</OutArgument>
                         </ui:GetAttribute.Result>

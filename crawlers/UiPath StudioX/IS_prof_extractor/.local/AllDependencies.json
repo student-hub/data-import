@@ -10545,9 +10545,9 @@
     "restore": {
       "projectUniqueName": "Is prof extractor",
       "projectName": "Is prof extractor",
-      "projectPath": "C:\\Users\\GeorgeMD\\Documents\\UiPath\\Is prof extractor\\.local",
+      "projectPath": "C:\\Users\\GeorgeMD\\source\\repos\\acs-upb-mobile-all\\data-import\\crawlers\\UiPath StudioX\\IS_prof_extractor\\.local",
       "packagesPath": "C:\\Users\\GeorgeMD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GeorgeMD\\Documents\\UiPath\\Is prof extractor\\.local"
+      "outputPath": "C:\\Users\\GeorgeMD\\source\\repos\\acs-upb-mobile-all\\data-import\\crawlers\\UiPath StudioX\\IS_prof_extractor\\.local"
     },
     "frameworks": {
       "net461": {
