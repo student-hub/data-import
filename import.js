@@ -2,7 +2,6 @@
 
 // Dependencies
 const firestoreService = require('firestore-export-import');
-const firebaseConfig = require('./config.js');
 const serviceAccount = require('./serviceAccount.json');
 const excelToJson = require('convert-excel-to-json');
 const inquirer = require('inquirer')
