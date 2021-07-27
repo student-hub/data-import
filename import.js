@@ -9,7 +9,7 @@ const inquirer = require('inquirer')
 const inquirerFileTreeSelection = require('inquirer-file-tree-selection-prompt')
 const path = require('path');
 const chalk = require('chalk');
-var fs = require('fs');
+const fs = require('fs');
 
 const selectFile = async () => {
   // Select file to import
@@ -95,7 +95,7 @@ const convertFile = async (file) => {
 // JSON To Firestore
 const jsonToFirestore = async (file) => {
   console.log('Initialzing Firebase...');
-  await firestoreService.initializeApp(serviceAccount, firebaseConfig.databaseURL);
+  await firestoreService.initializeApp(serviceAccount);
   console.log('Firebase initialized.');
 
   console.log('Uploading file...')
