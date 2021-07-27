@@ -12,6 +12,8 @@ as `serviceAccount.json` and should never be shared with anyone.
 
 Place the file you would like to import in the [`data/`](data) folder in this repository, then run:
 
+| :warning: | It is recommended to try importing to the dev database first (by simply downloading the dev service account key), just to make sure everything works as intended. |
+
 ```
 npm ci
 node import.js
